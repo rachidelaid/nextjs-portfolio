@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+
+.text_rotate {
+  display: flex;
+  align-items: center;
+}
+
+.text_rotate span {
+  color: var(--accent-color);
+}
+
+.code {
+  font-family: 'Courier Prime', monospace;
+  margin-left: 0.5rem;
+}
