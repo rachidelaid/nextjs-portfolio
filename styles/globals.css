@@ -11,16 +11,29 @@
 }
 
 :root {
-  --dark-bg: #181821;
-  --light-bg: #24242f;
-  --lighter-bg: #2c2c38;
+  --dark1: #191923;
+  --dark2: #1e1e28;
+  --dark3: #20202a;
+  --dark4: #23232f;
+  --dark5: #2d2d39;
   --accent-color: #ffc107;
   --white-color: #fafafc;
   --gray-color: #8c8c8e;
+
+  --small-shadow: 0 1px 4px 0 rgba(15, 15, 20, 0.1);
+  --default-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
 }
 
 body {
   font-family: 'Montserrat', sans-serif;
   color: var(--white-color);
-  background-color: var(--dark-bg);
+  background-color: var(--dark1);
+}
+
+.app {
+  display: flex;
+  margin: 1rem;
+  background-color: var(--dark2);
+  height: calc(100vh - 2rem);
+  box-shadow: var(--default-shadow);
 }
