@@ -1,0 +1,18 @@
+.details {
+  padding: 1rem;
+}
+
+.details ul {
+  border-bottom: 1px solid var(--lightgray-color);
+}
+
+.details li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.6rem;
+}
+
+.details span {
+  color: var(--gray-color);
+  font-size: 0.9rem;
+}

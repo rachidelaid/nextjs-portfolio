@@ -2,4 +2,6 @@
   display: flex;
   flex-direction: column;
   width: 18rem;
+  box-shadow: var(--default-shadow);
+  background-color: var(--dark3);
 }

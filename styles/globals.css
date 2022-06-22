@@ -8,6 +8,7 @@
   box-sizing: border-box;
   color: inherit;
   text-decoration: none;
+  list-style: none;
 }
 
 :root {
@@ -19,6 +20,7 @@
   --accent-color: #ffc107;
   --white-color: #fafafc;
   --gray-color: #8c8c8e;
+  --lightgray-color: #8c8c8e3b;
 
   --small-shadow: 0 1px 4px 0 rgba(15, 15, 20, 0.1);
   --default-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
