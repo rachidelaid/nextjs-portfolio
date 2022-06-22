@@ -1,16 +1,15 @@
-html,
-body {
+*, *::after, *::before {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
+  box-sizing: border-box;
   color: inherit;
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+:root {
+  --dark-bg: #181821;
+  --light-bg: #24242F;
+  --lighter-bg: #2C2C38;
+  --accent-color: #FFC107;
+  --white-color:#FAFAFC;
 }
