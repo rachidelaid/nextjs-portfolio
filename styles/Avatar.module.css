@@ -1,6 +1,14 @@
 .avatar_wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 1rem;
   background-color: var(--light-bg);
+  gap: 0.2rem;
+}
+
+.avatar_wrap small {
+  color: var(--gray-color);
 }
 
 .avatar {
