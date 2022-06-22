@@ -16,7 +16,7 @@ const Avatar = () => {
 
         <div className={styles.status}>
           <div className={styles.circle}></div>
-          <div className={styles.tooltip}></div>
+          <small className={styles.tooltip}>available for hire</small>
         </div>
       </div>
     </div>
