@@ -26,6 +26,74 @@ const SideDetails = () => {
           <span>{age()}</span>
         </li>
       </ul>
+
+      <div className={styles.languages}>
+        <div>
+          <div className={styles.graph}>
+            <svg viewBox="0 0 100 100">
+              <path
+                d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93"
+                stroke="#eee"
+              ></path>
+              <path
+                d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93"
+                stroke="#555"
+                style={{
+                  'stroke-dasharray': '292.209px, 292.209px',
+                  'stroke-dashoffset': 0,
+                }}
+              ></path>
+            </svg>
+            <div className={styles.progress}>100%</div>
+          </div>
+
+          <h6>Arabic</h6>
+        </div>
+
+        <div>
+          <div className={styles.graph}>
+            <svg viewBox="0 0 100 100">
+              <path
+                d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93"
+                stroke="#eee"
+              ></path>
+              <path
+                d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93"
+                stroke="#555"
+                style={{
+                  'stroke-dasharray': '292.209px, 292.209px',
+                  'stroke-dashoffset': '29.2209px',
+                }}
+              ></path>
+            </svg>
+            <div className={styles.progress}>90%</div>
+          </div>
+
+          <h6>English</h6>
+        </div>
+
+        <div>
+          <div className={styles.graph}>
+            <svg viewBox="0 0 100 100">
+              <path
+                d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93"
+                stroke="#eee"
+              ></path>
+              <path
+                d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93"
+                stroke="#555"
+                style={{
+                  'stroke-dasharray': '292.209px, 292.209px',
+                  'stroke-dashoffset': '87.6626px',
+                }}
+              ></path>
+            </svg>
+            <div className={styles.progress}>70%</div>
+          </div>
+
+          <h6>French</h6>
+        </div>
+      </div>
     </div>
   );
 };
