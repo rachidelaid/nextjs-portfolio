@@ -1,0 +1,55 @@
+.avatar_wrap {
+  padding: 1rem;
+}
+
+.avatar {
+  position: relative;
+  width: fit-content;
+}
+
+.avatar_image {
+  border-radius: 50%;
+  z-index: -2;
+}
+
+.status {
+  z-index: 2;
+}
+
+.circle {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  height: 0.7rem;
+  width: 0.7rem;
+  background: var(--accent-color);
+  border-radius: 50%;
+}
+
+.circle::before {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  bottom: -5.5px;
+  right: -5.5px;
+  background: #fafafc;
+  height: 23px;
+  width: 23px;
+  border-radius: 50%;
+  -webkit-animation: puls 1s infinite;
+  animation: puls 1s infinite;
+}
+
+@keyframes puls {
+  0% {
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0;
+  }
+}
