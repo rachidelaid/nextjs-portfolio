@@ -25,6 +25,6 @@
 }
 
 .footer svg:hover {
-  color: var(--white);
+  color: var(--white-color);
   text-shadow: 0 0 3px rgba(250, 250, 252, 0.4);
 }

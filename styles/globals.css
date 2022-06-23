@@ -39,3 +39,7 @@ body {
   height: calc(100vh - 2rem);
   box-shadow: var(--default-shadow);
 }
+
+.main {
+  width: 100%;
+}
