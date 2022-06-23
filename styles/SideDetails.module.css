@@ -60,3 +60,27 @@
   font-size: 11px;
   color: var(--gray-color);
 }
+
+.btn {
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  color: var(--gray-color);
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 0;
+  cursor: pointer;
+}
+
+.btn svg {
+  width: 20px;
+}
+
+.btn:hover {
+  color: var(--white);
+  text-shadow: 0 0 3px rgba(250, 250, 252, 0.4);
+}

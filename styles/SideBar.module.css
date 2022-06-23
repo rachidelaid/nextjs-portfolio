@@ -4,4 +4,5 @@
   width: 18rem;
   box-shadow: var(--default-shadow);
   background-color: var(--dark3);
+  position: relative;
 }
