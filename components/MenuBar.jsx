@@ -7,7 +7,7 @@ const MenuBar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className={styles.menu_bar}>
+    <div className={`${styles.menu_bar} ${open ? styles.expand : ''}`}>
       <div className={styles.burger_menu} onClick={() => setOpen(!open)}>
         <div className={`${styles.burger} ${open ? styles.active : ''}`}>
           <span></span>
