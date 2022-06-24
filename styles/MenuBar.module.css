@@ -7,37 +7,57 @@
 }
 
 .burger_menu {
+  background-color: var(--dark4);
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  gap: 5px;
-  padding: 2rem 1.5rem;
+  padding: 2rem 0;
+}
+
+.burger {
   cursor: pointer;
-  background-color: var(--dark4);
+  position: relative;
+  width: 22px;
+  height: 12px;
 }
 
-.burger_menu > span {
+.burger span {
+  position: absolute;
+  display: block;
   width: 100%;
-  height: 5px;
-  transition: 0.55s ease-in-out;
+  height: 2px;
   background-color: var(--gray-color);
-  transform-origin: right;
-  z-index: 999;
+  transition: all 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
 }
 
-.burger_menu:hover span {
+.burger:hover span {
   background-color: var(--white-color);
   text-shadow: 0 0 3px rgba(250, 250, 252, 0.4);
 }
 
-.burger_menu .active:first-child {
-  transform: rotate(-51deg);
+.burger span:first-child {
+  top: 0;
 }
-.burger_menu .active:nth-child(2) {
-  opacity: 0;
+
+.burger span:last-child {
+  bottom: 0;
 }
-.burger_menu .active:last-child {
-  transform: rotate(51deg);
+
+.burger:not(.active):hover span:first-child {
+  width: 26px;
+}
+
+.burger:not(.active):hover span:last-child {
+  width: 12px;
+}
+
+.burger.active span:first-child {
+  transform: rotate(45deg);
+  top: 5px;
+}
+
+.burger.active span:last-child {
+  transform: rotate(-45deg);
+  bottom: 5px;
 }
 
 .languages {

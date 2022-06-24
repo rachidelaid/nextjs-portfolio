@@ -7,9 +7,10 @@ const MenuBar = () => {
   return (
     <div className={styles.menu_bar}>
       <div className={styles.burger_menu} onClick={() => setOpen(!open)}>
-        <span className={open ? styles.active : ''}></span>
-        <span className={open ? styles.active : ''}></span>
-        <span className={open ? styles.active : ''}></span>
+        <div className={`${styles.burger} ${open ? styles.active : ''}`}>
+          <span></span>
+          <span></span>
+        </div>
       </div>
 
       <div className={styles.languages}>
