@@ -6,4 +6,5 @@
   box-shadow: var(--default-shadow);
   background-color: var(--dark3);
   position: relative;
+  z-index: 99;
 }
