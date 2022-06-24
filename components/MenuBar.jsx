@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import styles from '../styles/MenuBar.module.css';
 
+import MenuLinks from './MenuLinks';
+
 const MenuBar = () => {
   const [open, setOpen] = useState(false);
 
@@ -12,6 +14,8 @@ const MenuBar = () => {
           <span></span>
         </div>
       </div>
+
+      <MenuLinks />
 
       <div className={styles.languages}>
         <p>AR</p>

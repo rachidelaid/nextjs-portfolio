@@ -1,0 +1,19 @@
+.links {
+  position: relative;
+  height: calc(100% - 4rem - 12px - 8.9rem);
+}
+
+.current {
+  transform: rotate(90deg);
+  color: var(--white-color);
+  position: absolute;
+  overflow: hidden;
+  top: 4rem;
+  opacity: 0.5;
+  left: 1rem;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  transition: 0.4s ease-in-out;
+}

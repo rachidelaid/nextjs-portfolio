@@ -67,21 +67,21 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 1rem;
-  padding: 2rem 0;
+  gap: 0.7rem;
+  padding: 1.5rem 0;
   width: 100%;
   color: var(--gray-color);
 }
 
 .languages p {
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 600;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   background-color: var(--dark1);
   border-radius: 50%;
 }
