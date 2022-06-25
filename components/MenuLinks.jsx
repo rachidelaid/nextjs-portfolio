@@ -51,7 +51,6 @@ const links = [
 
 const MenuLinks = ({ open, toggleMenu }) => {
   const router = useRouter();
-  console.log(router.pathname);
 
   return (
     <div className={styles.links}>
@@ -65,7 +64,9 @@ const MenuLinks = ({ open, toggleMenu }) => {
             animate="visible"
             exit="hidden"
           >
-            {links.find((l) => l.path === router.pathname).name}
+            {links.find((l) => l.path === router.pathname)
+              ? links.find((l) => l.path === router.pathname).name
+              : 'No Page'}
           </motion.div>
         )}
 
