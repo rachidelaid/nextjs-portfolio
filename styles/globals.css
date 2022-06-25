@@ -47,7 +47,7 @@ body {
 }
 
 .main.expand {
-  margin-left: -14rem;
+  margin-left: -4rem;
 }
 
 .main.expand::after {

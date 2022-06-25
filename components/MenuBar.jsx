@@ -20,7 +20,7 @@ const MenuBar = ({ openMenu }) => {
         </div>
       </div>
 
-      <MenuLinks open={open} />
+      <MenuLinks open={open} toggleMenu={toggleMenu} />
 
       <div className={styles.languages}>
         <p>AR</p>
