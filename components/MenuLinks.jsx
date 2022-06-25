@@ -21,7 +21,7 @@ const currentMotions = {
 
 const linksMotions = {
   hidden: {
-    x: 120,
+    x: 130,
     opacity: 0,
   },
   visible: {
@@ -84,10 +84,9 @@ const MenuLinks = ({ open, toggleMenu }) => {
                   router.pathname === link.path ? styles.active : ''
                 }`}
                 variants={linksMotions}
+                onClick={() => toggleMenu()}
               >
-                <Link href={link.path} onClick={() => toggleMenu()}>
-                  {link.name}
-                </Link>
+                <Link href={link.path}>{link.name}</Link>
               </motion.li>
             ))}
           </motion.ul>
