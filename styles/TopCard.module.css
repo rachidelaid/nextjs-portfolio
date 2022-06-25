@@ -26,4 +26,5 @@
   letter-spacing: 0.1rem;
   width: fit-content;
   cursor: pointer;
+  text-transform: uppercase;
 }
