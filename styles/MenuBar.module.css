@@ -1,6 +1,7 @@
 .menu_bar {
   background: var(--dark3);
-  width: 6rem;
+  width: 4.5rem;
+  max-width: 4.5rem;
   height: 100%;
   box-shadow: var(--default-shadow);
   position: relative;
@@ -9,6 +10,7 @@
 
 .expand {
   width: 12rem;
+  max-width: 12rem;
 }
 
 .burger_menu {
@@ -73,7 +75,7 @@
   flex-direction: column;
   gap: 0.7rem;
   padding: 1.5rem 0;
-  padding-left: 1.65rem;
+  padding-left: 1.5rem;
   width: 100%;
   color: var(--gray-color);
 }

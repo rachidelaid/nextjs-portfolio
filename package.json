@@ -9,11 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@coreui/icons": "^3.0.0-alpha.0",
     "framer-motion": "^6.3.15",
     "next": "12.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-rotating-text": "^1.4.1"
+    "react-icons": "^4.4.0",
+    "react-rotating-text": "^1.4.1",
+    "swiper": "^8.2.4"
   },
   "devDependencies": {
     "eslint": "8.18.0",
