@@ -1,9 +1,37 @@
 .swiper {
   margin-top: 2rem;
+  overflow: hidden;
 }
 
 .swiper svg {
   width: 45px;
   height: 45px;
   color: var(--gray-color);
+}
+
+.slide {
+  position: relative;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  position: absolute;
+  bottom: 0;
+  padding: 0.5rem;
+  background-color: var(--dark1);
+  color: var(--gray-color);
+  display: flex;
+  width: 100%;
+  text-align: center;
+  height: fit-content;
+  font-size: 0.8rem;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.slide:hover .title {
+  opacity: 0.9;
 }

@@ -142,7 +142,7 @@ const Frameworks = () => {
       element: <SiTypescript key="icon25" />,
     },
     {
-      title: 'Visual Studio Code',
+      title: 'VS Code',
       element: <SiVisualstudiocode key="icon26" />,
     },
     {
@@ -176,7 +176,10 @@ const Frameworks = () => {
         modules={[Autoplay]}
       >
         {icons.map((icon, index) => (
-          <SwiperSlide key={`icon-${index + 1}`}>{icon.element}</SwiperSlide>
+          <SwiperSlide key={`icon-${index + 1}`} className={styles.slide}>
+            <small className={styles.title}>{icon.title}</small>
+            {icon.element}
+          </SwiperSlide>
         ))}
       </Swiper>
     </div>
