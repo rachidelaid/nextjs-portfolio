@@ -1,11 +1,11 @@
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.css';
 
-import TextRotate from '../components/TextRotate'
+import TopCard from '../components/TopCard';
 
 export default function Home() {
   return (
     <div className={styles.container}>
-      <TextRotate/>
+      <TopCard />
     </div>
-  )
+  );
 }
