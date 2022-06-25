@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { FaUserAlt, FaAt, FaEnvelope } from 'react-icons/fa';
 import styles from '../styles/contact.module.css';
 
 const cardMotions = {
@@ -18,6 +19,7 @@ const contact = () => {
 
   return (
     <div className={styles.container}>
+      <h2>Get in touch</h2>
       <motion.form
         onSubmit={handleSubmit}
         className={styles.card}
@@ -26,6 +28,24 @@ const contact = () => {
         animate="visible"
         exit="hidden"
       >
+        <motion.label htmlFor="name">
+          <FaUserAlt />
+          <input type="text" name="name" id="name" placeholder="name" />
+        </motion.label>
+        <motion.label htmlFor="email">
+          <FaAt />
+          <input type="email" name="email" id="email" placeholder="Email" />
+        </motion.label>
+        <motion.label htmlFor="message">
+          <FaEnvelope />
+          <textarea
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+            placeholder="Message"
+          ></textarea>
+        </motion.label>
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
