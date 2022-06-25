@@ -30,6 +30,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   color: var(--white-color);
   background-color: var(--dark1);
+  overflow-x: hidden;
 }
 
 .app {

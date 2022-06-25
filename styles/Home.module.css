@@ -1,3 +1,15 @@
 .container {
   padding: 0 2rem;
 }
+
+.top_wrap {
+  background: linear-gradient(to bottom, #1e1e2800, #1e1e28),
+    url('../public/bg.jpg');
+  background-size: cover;
+  background-blend-mode: darken;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 400px;
+  width: 100%;
+}
