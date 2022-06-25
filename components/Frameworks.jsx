@@ -19,6 +19,7 @@ import {
   DiSass,
   DiHeroku,
   DiIonic,
+  DiNpm,
 } from 'react-icons/di';
 import {
   SiD3Dotjs,
@@ -30,38 +31,136 @@ import {
   SiRedux,
   SiTypescript,
   SiVisualstudiocode,
+  SiSvelte,
+  SiNextdotjs,
+  SiNuxtdotjs,
+  SiFirebase,
 } from 'react-icons/si';
 import 'swiper/css';
 import styles from '../styles/Frameworks.module.css';
 
 const Frameworks = () => {
   const icons = [
-    <DiBootstrap key="icon1" />,
-    <DiCss3Full key="icon2" />,
-    <DiCss3 key="icon3" />,
-    <DiGit key="icon4" />,
-    <DiHtml5 key="icon5" />,
-    <DiJsBadge key="icon6" />,
-    <DiLinux key="icon7" />,
-    <DiMongodb key="icon8" />,
-    <DiNodejsSmall key="icon9" />,
-    <DiPostgresql key="icon10" />,
-    <DiPython key="icon11" />,
-    <DiRuby key="icon12" />,
-    <DiRor key="icon13" />,
-    <DiReact key="icon14" />,
-    <DiSass key="icon15" />,
-    <DiHeroku key="icon16" />,
-    <DiIonic key="icon17" />,
-    <SiD3Dotjs key="icon18" />,
-    <SiElectron key="icon19" />,
-    <SiFigma key="icon20" />,
-    <SiJest key="icon21" />,
-    <SiNetlify key="icon22" />,
-    <SiPostman key="icon23" />,
-    <SiRedux key="icon14" />,
-    <SiTypescript key="icon25" />,
-    <SiVisualstudiocode key="icon26" />,
+    {
+      title: 'Bootstrap',
+      element: <DiBootstrap key="icon1" />,
+    },
+    {
+      title: 'CSS3',
+      element: <DiCss3Full key="icon2" />,
+    },
+    {
+      title: 'Firebase',
+      element: <SiFirebase key="icon3" />,
+    },
+    {
+      title: 'Git',
+      element: <DiGit key="icon4" />,
+    },
+    {
+      title: 'HTML5',
+      element: <DiHtml5 key="icon5" />,
+    },
+    {
+      title: 'Javascript',
+      element: <DiJsBadge key="icon6" />,
+    },
+    {
+      title: 'Linux',
+      element: <DiLinux key="icon7" />,
+    },
+    {
+      title: 'MongoDB',
+      element: <DiMongodb key="icon8" />,
+    },
+    {
+      title: 'NodeJS',
+      element: <DiNodejsSmall key="icon9" />,
+    },
+    {
+      title: 'PostgreSQL',
+      element: <DiPostgresql key="icon10" />,
+    },
+    {
+      title: 'Python',
+      element: <DiPython key="icon11" />,
+    },
+    {
+      title: 'Ruby',
+      element: <DiRuby key="icon12" />,
+    },
+    {
+      title: 'Ruby on Rails',
+      element: <DiRor key="icon13" />,
+    },
+    {
+      title: 'ReactJS',
+      element: <DiReact key="icon14" />,
+    },
+    {
+      title: 'Sass',
+      element: <DiSass key="icon15" />,
+    },
+    {
+      title: 'Heroku',
+      element: <DiHeroku key="icon16" />,
+    },
+    {
+      title: 'Ionic',
+      element: <DiIonic key="icon17" />,
+    },
+    {
+      title: 'D3.js',
+      element: <SiD3Dotjs key="icon18" />,
+    },
+    {
+      title: 'ElectronJS',
+      element: <SiElectron key="icon19" />,
+    },
+    {
+      title: 'Figma',
+      element: <SiFigma key="icon20" />,
+    },
+    {
+      title: 'Jest',
+      element: <SiJest key="icon21" />,
+    },
+    {
+      title: 'Netlify',
+      element: <SiNetlify key="icon22" />,
+    },
+    {
+      title: 'Postman',
+      element: <SiPostman key="icon23" />,
+    },
+    {
+      title: 'Redux',
+      element: <SiRedux key="icon14" />,
+    },
+    {
+      title: 'TypeScript',
+      element: <SiTypescript key="icon25" />,
+    },
+    {
+      title: 'Visual Studio Code',
+      element: <SiVisualstudiocode key="icon26" />,
+    },
+    {
+      title: 'Npm',
+      element: <DiNpm key="icon27" />,
+    },
+    {
+      title: 'Svelte',
+      element: <SiSvelte key="icon28" />,
+    },
+    {
+      title: 'Next.js',
+      element: <SiNextdotjs key="icon29" />,
+    },
+    {
+      title: 'Nuxt.js',
+      element: <SiNuxtdotjs key="icon30" />,
+    },
   ];
 
   return (
@@ -77,7 +176,7 @@ const Frameworks = () => {
         modules={[Autoplay]}
       >
         {icons.map((icon, index) => (
-          <SwiperSlide key={`icon-${index + 1}`}>{icon}</SwiperSlide>
+          <SwiperSlide key={`icon-${index + 1}`}>{icon.element}</SwiperSlide>
         ))}
       </Swiper>
     </div>
