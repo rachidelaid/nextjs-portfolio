@@ -7,6 +7,11 @@
   z-index: 9;
 }
 
+.slider {
+  width: 100%;
+  padding-top: 1.5rem;
+}
+
 .recommendation_card {
   position: relative;
   background-color: var(--dark5);
