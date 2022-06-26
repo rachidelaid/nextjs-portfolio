@@ -45,6 +45,7 @@ body {
   width: calc(100% - 19.5rem);
   transition: 0.4s ease-in-out;
   position: relative;
+  overflow-y: auto;
 }
 
 .main.expand {

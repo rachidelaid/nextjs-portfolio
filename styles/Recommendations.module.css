@@ -1,0 +1,39 @@
+.recommendations {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem 0;
+  z-index: 9;
+}
+
+.recommendation_card {
+  position: relative;
+  background-color: var(--dark5);
+  color: var(--gray-color);
+  padding: 2rem;
+  box-shadow: var(--default-shadow);
+}
+
+.recommendation_card h5 {
+  color: var(--white-color);
+  margin-bottom: 0.3rem;
+}
+
+.recommendation_card small {
+  display: block;
+  font-size: 0.8rem;
+  margin-bottom: 0.7rem;
+  opacity: 0.8;
+}
+
+.image_wrap {
+  position: absolute;
+  top: -1.5rem;
+  right: 2rem;
+}
+
+.profile_image {
+  border-radius: 50%;
+  box-shadow: var(--default-shadow);
+}
