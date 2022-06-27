@@ -50,6 +50,7 @@ body {
 
 .main.expand {
   margin-left: -6rem;
+  overflow: hidden;
 }
 
 .main.expand::after {
