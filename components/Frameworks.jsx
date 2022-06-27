@@ -4,7 +4,6 @@ import { Autoplay } from 'swiper';
 import {
   DiBootstrap,
   DiCss3Full,
-  DiCss3,
   DiGit,
   DiHtml5,
   DiJsBadge,
