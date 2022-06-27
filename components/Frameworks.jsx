@@ -163,12 +163,28 @@ const Frameworks = () => {
     },
   ];
 
+  const breakpoints = {
+    200: {
+      slidesPerView: 2,
+    },
+    500: {
+      slidesPerView: 4,
+    },
+    800: {
+      slidesPerView: 6,
+    },
+    1200: {
+      slidesPerView: 8,
+    },
+  };
+
   return (
     <div className={styles.swiper}>
       <Swiper
         slidesPerView={8}
         spaceBetween={30}
         loop={true}
+        breakpoints={breakpoints}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
