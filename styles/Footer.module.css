@@ -1,0 +1,8 @@
+.footer {
+  padding: 1rem;
+  background-color: var(--dark5);
+  color: var(--gray-color);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin: 0 2rem 2rem 2rem;
+}
