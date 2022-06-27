@@ -70,3 +70,7 @@ body {
   width: 20px;
   opacity: 1;
 }
+
+svg.disabled {
+  opacity: 0.2;
+}

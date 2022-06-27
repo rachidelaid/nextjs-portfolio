@@ -1,7 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
+import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper';
+import { Pagination, Navigation } from 'swiper';
 import 'swiper/css/pagination';
 import styles from '../styles/Recommendations.module.css';
 
@@ -67,6 +68,12 @@ const Recommendations = () => {
       `<span class="${cn}" aria-label="Go to slide ${i}"></span>`,
   };
 
+  const navigation = {
+    nextEl: '#next',
+    prevEl: '#prev',
+    disabledClass: 'disabled',
+  };
+
   return (
     <div className={styles.recommendations}>
       <h3>Recommendations From Linkedin</h3>
@@ -75,7 +82,8 @@ const Recommendations = () => {
         slidesPerView={2}
         spaceBetween={30}
         pagination={pagination}
-        modules={[Pagination]}
+        navigation={navigation}
+        modules={[Pagination, Navigation]}
       >
         {recommendations.map((card, index) => (
           <SwiperSlide key={`card-${index}`} className={styles.slide}>
@@ -83,7 +91,13 @@ const Recommendations = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className={styles.pagination} id="pagination"></div>
+      <div className={styles.footer}>
+        <div className={styles.pagination} id="pagination"></div>
+        <div className={styles.navigation}>
+          <FiChevronLeft id="prev" />
+          <FiChevronRight id="next" />
+        </div>
+      </div>
     </div>
   );
 };

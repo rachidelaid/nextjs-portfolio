@@ -11,6 +11,10 @@
   padding-top: 2.5rem;
 }
 
+.footer {
+  display: flex;
+}
+
 .pagination span {
   width: 10px;
   background-color: var(--gray-color);
@@ -18,6 +22,22 @@
   opacity: 0.5;
   height: 4px;
   transition: 0.4s ease-in-out;
+}
+
+.navigation {
+  display: flex;
+  margin-top: 0.3rem;
+}
+
+.navigation svg {
+  color: var(--gray-color);
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.navigation svg:hover {
+  color: var(--white-color);
+  text-shadow: 0 0 3px rgba(250, 250, 252, 0.4);
 }
 
 .recommendation_card {
