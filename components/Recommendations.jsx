@@ -79,8 +79,14 @@ const Recommendations = () => {
       <h3>Recommendations From Linkedin</h3>
       <Swiper
         className={styles.slider}
-        slidesPerView={2}
+        slidesPerView={1}
         spaceBetween={30}
+        breakpoints={{
+          // when window width is >= 1100px
+          1150: {
+            slidesPerView: 2,
+          },
+        }}
         pagination={pagination}
         navigation={navigation}
         modules={[Pagination, Navigation]}
