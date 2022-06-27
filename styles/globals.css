@@ -64,3 +64,9 @@ body {
   z-index: 95;
   opacity: 0.4;
 }
+
+#pagination .swiper-pagination-bullet-active {
+  background-color: var(--accent-color);
+  width: 20px;
+  opacity: 1;
+}
