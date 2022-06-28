@@ -1,5 +1,7 @@
 .container {
   padding: 2rem;
+  position: relative;
+  max-width: 100%;
 }
 
 .card {

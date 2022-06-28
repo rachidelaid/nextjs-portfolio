@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaUserAlt, FaAt, FaEnvelope } from 'react-icons/fa';
 import styles from '../styles/contact.module.css';
 
+import Footer from '../components/Footer';
+
 const cardMotions = {
   hidden: {
     scale: 0.9,
@@ -71,6 +73,7 @@ const contact = () => {
           </motion.button>
         </motion.form>
       </AnimatePresence>
+      <Footer />
     </div>
   );
 };
