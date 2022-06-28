@@ -56,7 +56,7 @@ const Recommendations = () => {
       image:
         'https://media-exp1.licdn.com/dms/image/C4E03AQENQAcnn1NuXg/profile-displayphoto-shrink_100_100/0/1645732120285?e=1661990400&v=beta&t=bLtJx5mYo482KI9b9Ki1Pw5Zqo9cnfdEd97USSCI8Ko',
       title:
-        'Full-Stack Web Developer | JavaScript, React, Redux, Ruby, Rails, PostgreSQL | Currently looking for opportunities.Full-Stack Web Developer | JavaScript, React, Redux, Ruby, Rails, PostgreSQL | Currently looking for opportunities.',
+        'Full-Stack Web Developer | JavaScript, React, Redux, Ruby, Rails, PostgreSQL | Currently looking for opportunities.',
       description: `I worked with Rachid El Aid as students at Microverse. Rachid was smart and knew more than the others. With that information, he reached and gave insight to many. His mindset is that by teaching you also learn. I found him to be a pillar to motivating myself and I'm glad I spent one month working with him.`,
     },
     {
