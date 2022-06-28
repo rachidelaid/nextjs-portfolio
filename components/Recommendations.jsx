@@ -93,7 +93,7 @@ const Recommendations = () => {
     <div className={styles.recommendations}>
       <h3>Recommendations From Linkedin</h3>
       <Swiper
-        className={styles.slider}
+        className={`${styles.slider} recommendations_list`}
         slidesPerView={1}
         spaceBetween={30}
         breakpoints={{

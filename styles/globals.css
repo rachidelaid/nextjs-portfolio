@@ -66,6 +66,10 @@ body {
   opacity: 0.4;
 }
 
+.recommendations_list .swiper-slide {
+  height: auto !important;
+}
+
 #pagination .swiper-pagination-bullet-active {
   background-color: var(--accent-color);
   width: 20px;
