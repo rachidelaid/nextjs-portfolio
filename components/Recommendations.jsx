@@ -80,7 +80,7 @@ const Recommendations = () => {
       <h3>Recommendations From Linkedin</h3>
       <SwiperWrap>
         {recommendations.map((card, index) => (
-          <SwiperSlide key={`card-${index}`} className={styles.slide}>
+          <SwiperSlide key={`card-${index}`}>
             <RecommendationCard key={`card-${index}`} card={card} />
           </SwiperSlide>
         ))}

@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { FaAngleRight } from 'react-icons/fa';
 import styles from '../styles/ProjectCard.module.css';
@@ -40,26 +41,28 @@ const contentMotion = {
 
 const ProjectCard = () => {
   return (
-    <motion.div
-      className={styles.card}
-      variants={cardMotion}
-      whileHover="hover"
-      initial="initial"
-      animate="animate"
-      exit="initial"
-    >
-      <motion.div variants={contentMotion} className={styles.content}>
-        <h3>Project Title</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          euismod, nisl eu consectetur consectetur.
-        </p>
-        <div className={styles.btn}>
-          <span>read more</span>
-          <FaAngleRight />
-        </div>
+    <Link href="/projects/1">
+      <motion.div
+        className={styles.card}
+        variants={cardMotion}
+        whileHover="hover"
+        initial="initial"
+        animate="animate"
+        exit="initial"
+      >
+        <motion.div variants={contentMotion} className={styles.content}>
+          <h3>Project Title</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            euismod, nisl eu consectetur consectetur.
+          </p>
+          <div className={styles.btn}>
+            <span>read more</span>
+            <FaAngleRight />
+          </div>
+        </motion.div>
       </motion.div>
-    </motion.div>
+    </Link>
   );
 };
 
