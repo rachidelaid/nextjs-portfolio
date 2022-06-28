@@ -61,6 +61,28 @@
   color: var(--gray-color);
 }
 
+.hobbies {
+  color: var(--gray-color);
+  font-size: 0.8rem;
+  padding: 0.6rem 0;
+}
+
+.hobbies li {
+  margin: 0.7rem 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hobbies p {
+  width: 100%;
+}
+
+.hobbies svg {
+  color: var(--accent-color);
+  width: 0.5rem;
+}
+
 .btn {
   text-transform: uppercase;
   font-size: 11px;

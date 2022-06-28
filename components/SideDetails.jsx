@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaAngleDown } from 'react-icons/fa';
 import styles from '../styles/SideDetails.module.css';
 
 const SideDetails = () => {
@@ -93,6 +94,20 @@ const SideDetails = () => {
 
           <h6>French</h6>
         </div>
+      </div>
+
+      <div className={styles.hobbies}>
+        <ul>
+          <li>
+            <FaAngleDown /> <p>Playing Football</p>
+          </li>
+          <li>
+            <FaAngleDown /> <p>Listening To Podcast</p>
+          </li>
+          <li>
+            <FaAngleDown /> <p>Playing Video Games</p>
+          </li>
+        </ul>
       </div>
 
       <div className={styles.btn}>
