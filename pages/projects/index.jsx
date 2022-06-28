@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import styles from '../styles/projects.module.css';
+import styles from '../../styles/projects.module.css';
 
-import Footer from '../components/Footer';
-import ProjectCard from '../components/ProjectCard';
+import Footer from '../../components/Footer';
+import ProjectCard from '../../components/ProjectCard';
 
 const projects = () => {
   const [category, setCategory] = useState(0);
