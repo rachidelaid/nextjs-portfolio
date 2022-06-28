@@ -27,7 +27,7 @@ const projects = () => {
   ];
 
   return (
-    <div>
+    <div className={styles.container}>
       <div className={styles.categories}>
         {categories.map((cate) => (
           <p
@@ -38,6 +38,12 @@ const projects = () => {
             {cate.name}
           </p>
         ))}
+      </div>
+      <div className={styles.projects}>
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
       </div>
       <Footer />
     </div>
