@@ -12,6 +12,10 @@
   margin-top: 2rem;
 }
 
+.top_card.center {
+  align-items: center;
+}
+
 .top_card h1 {
   font-size: 2.5rem;
   font-weight: 700;

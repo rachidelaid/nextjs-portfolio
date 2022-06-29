@@ -13,10 +13,10 @@ const cardMotions = {
   },
 };
 
-const TopCard = () => {
+const TopCard = ({ center }) => {
   return (
     <motion.div
-      className={styles.top_card}
+      className={`${styles.top_card} ${center ? styles.center : ''}`}
       variants={cardMotions}
       initial="hidden"
       animate="visible"

@@ -74,7 +74,7 @@ const Project = ({ project }) => {
         <p>{project.description}</p>
       </div>
 
-      <TopCard />
+      <TopCard center={true} />
       <motion.div
         variants={cardMotions}
         initial="hidden"
