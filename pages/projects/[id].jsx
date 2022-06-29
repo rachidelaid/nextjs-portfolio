@@ -56,6 +56,11 @@ const Project = ({ project }) => {
         ))}
       </SwiperWrap>
 
+      <div className={styles.details}>
+        <h4>Description</h4>
+        <p>{project.description}</p>
+      </div>
+
       <Footer />
     </div>
   );

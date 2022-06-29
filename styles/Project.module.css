@@ -16,3 +16,16 @@
   background-color: var(--dark1);
   border-radius: 1rem;
 }
+
+.details {
+  padding: 1.5rem;
+  background-color: var(--dark5);
+  margin: 2rem 0;
+  box-shadow: var(--default-shadow);
+}
+
+.details p {
+  font-size: 0.8rem;
+  color: var(--gray-color);
+  margin-top: 1rem;
+}
