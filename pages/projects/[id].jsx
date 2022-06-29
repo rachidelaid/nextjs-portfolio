@@ -1,10 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { SwiperSlide } from 'swiper/react';
+import { FaAngleRight, FaAngleLeft } from 'react-icons/fa';
 import styles from '../../styles/Project.module.css';
 
 import Footer from '../../components/Footer';
 import SwiperWrap from '../../components/SwiperWrap';
+import TopCard from '../../components/TopCard';
 
 import projects from '../../utils/projects';
 
@@ -59,6 +62,25 @@ const Project = ({ project }) => {
       <div className={styles.details}>
         <h4>Description</h4>
         <p>{project.description}</p>
+      </div>
+
+      <TopCard />
+      <div className={styles.card_footer}>
+        <Link href="/projects/3">
+          <div className={styles.btn}>
+            <FaAngleLeft />
+            Previous project
+          </div>
+        </Link>
+        <Link href="/projects" className={styles.all_link}>
+          All projects
+        </Link>
+        <Link href="/projects/1">
+          <div className={styles.btn}>
+            Next project
+            <FaAngleRight />
+          </div>
+        </Link>
       </div>
 
       <Footer />

@@ -29,3 +29,50 @@
   color: var(--gray-color);
   margin-top: 1rem;
 }
+
+.card_footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  padding: 2rem;
+  color: var(--gray-color);
+  background-color: var(--dark5);
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.all_link {
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+
+.all_link:hover {
+  color: var(--white-color);
+  text-shadow: 0 0 3px rgba(250, 250, 252, 0.4);
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.btn:first-child {
+  justify-self: start;
+}
+
+.btn:last-child {
+  justify-self: end;
+}
+
+.btn:hover {
+  gap: 1rem;
+}
+
+.btn:hover {
+  gap: 1rem;
+}
