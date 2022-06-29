@@ -41,14 +41,6 @@ const cardMotions = {
 };
 
 const Project = ({ project }) => {
-  const images = [
-    'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-    'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-    'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-    'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-    'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-  ];
-
   return (
     <div className={styles.container}>
       <div className={styles.head}>
@@ -57,12 +49,12 @@ const Project = ({ project }) => {
       </div>
 
       <SwiperWrap>
-        {images.map((image, index) => (
+        {[project.image].map((image, index) => (
           <SwiperSlide key={`card-${index}`}>
             <Image
               src={image}
-              width={200}
-              height={160}
+              width={400}
+              height={300}
               alt="project screenshot"
             />
           </SwiperSlide>
