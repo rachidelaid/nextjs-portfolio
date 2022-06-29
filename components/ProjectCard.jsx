@@ -39,9 +39,9 @@ const contentMotion = {
   },
 };
 
-const ProjectCard = () => {
+const ProjectCard = ({ project }) => {
   return (
-    <Link href="/projects/1">
+    <Link href={`/projects/${project.id}}`}>
       <motion.div
         className={styles.card}
         variants={cardMotion}
@@ -49,13 +49,15 @@ const ProjectCard = () => {
         initial="initial"
         animate="animate"
         exit="initial"
+        style={{ backgroundImage: `url(${project.image})` }}
       >
         <motion.div variants={contentMotion} className={styles.content}>
-          <h3>Project Title</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            euismod, nisl eu consectetur consectetur.
-          </p>
+          <h3>{project.title}</h3>
+          {project.description.lenght <= 50 ? (
+            <p>{project.description}</p>
+          ) : (
+            <p>{project.description.substring(0, 50)} ...</p>
+          )}
           <div className={styles.btn}>
             <span>read more</span>
             <FaAngleRight />
