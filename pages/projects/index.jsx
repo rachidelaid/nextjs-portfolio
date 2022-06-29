@@ -7,8 +7,6 @@ import ProjectCard from '../../components/ProjectCard';
 import projectList from '../../utils/projects';
 
 const projects = () => {
-  const [category, setCategory] = useState(0);
-
   const categories = [
     {
       name: 'All',
@@ -34,8 +32,7 @@ const projects = () => {
         {categories.map((cate) => (
           <p
             key={cate.id}
-            className={`${cate.id === category ? styles.active : ''}`}
-            onClick={() => setCategory(cate.id)}
+            // className={`${cate.id === category ? styles.active : ''}`}
           >
             {cate.name}
           </p>
