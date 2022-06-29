@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { SwiperSlide } from 'swiper/react';
 import { FaAngleRight, FaAngleLeft } from 'react-icons/fa';
 import styles from '../../styles/Project.module.css';
@@ -28,6 +29,15 @@ export const getStaticProps = (context) => {
       project,
     },
   };
+};
+
+const cardMotions = {
+  hidden: {
+    scale: 0.9,
+  },
+  visible: {
+    scale: 1,
+  },
 };
 
 const Project = ({ project }) => {
@@ -65,23 +75,27 @@ const Project = ({ project }) => {
       </div>
 
       <TopCard />
-      <div className={styles.card_footer}>
+      <motion.div
+        variants={cardMotions}
+        initial="hidden"
+        animate="visible"
+        exit="hidden"
+        className={styles.card_footer}
+      >
         <Link href="/projects/3">
           <div className={styles.btn}>
             <FaAngleLeft />
             Previous project
           </div>
         </Link>
-        <Link href="/projects" className={styles.all_link}>
-          All projects
-        </Link>
+        <Link href="/projects">All projects</Link>
         <Link href="/projects/1">
           <div className={styles.btn}>
             Next project
             <FaAngleRight />
           </div>
         </Link>
-      </div>
+      </motion.div>
 
       <Footer />
     </div>
