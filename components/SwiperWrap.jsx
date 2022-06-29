@@ -2,6 +2,7 @@ import React from 'react';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import { Swiper } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper';
+import 'swiper/css';
 import 'swiper/css/pagination';
 import styles from '../styles/SwiperWrap.module.css';
 
@@ -25,6 +26,7 @@ const SwiperWrap = ({ children }) => {
         className={`${styles.slider} recommendations_list`}
         slidesPerView={1}
         spaceBetween={30}
+        direction="horizontal"
         breakpoints={{
           // when window width is >= 1100px
           1150: {
