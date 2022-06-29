@@ -41,7 +41,7 @@ const contentMotion = {
 
 const ProjectCard = ({ project }) => {
   return (
-    <Link href={`/projects/${project.id}}`}>
+    <Link href={`/projects/${project.id}`}>
       <motion.div
         className={styles.card}
         variants={cardMotion}
