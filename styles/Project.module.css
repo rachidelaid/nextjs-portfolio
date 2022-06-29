@@ -57,9 +57,12 @@
   align-items: center;
   gap: 0.2rem;
   text-transform: uppercase;
-  color: var(--accent-color);
   transition: 0.4s ease-in-out;
   cursor: pointer;
+}
+
+.btn.active {
+  color: var(--accent-color);
 }
 
 .btn:first-child {

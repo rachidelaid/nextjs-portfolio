@@ -82,19 +82,37 @@ const Project = ({ project }) => {
         exit="hidden"
         className={styles.card_footer}
       >
-        <Link href="/projects/3">
-          <div className={styles.btn}>
-            <FaAngleLeft />
-            Previous project
-          </div>
-        </Link>
+        {projects.find((p) => p.id === project.id - 1) ? (
+          <Link href={`/projects/${project.id - 1}`}>
+            <div className={`${styles.btn} ${styles.active}`}>
+              <FaAngleLeft />
+              Previous project
+            </div>
+          </Link>
+        ) : (
+          <Link href="#">
+            <div className={styles.btn}>
+              <FaAngleLeft />
+              Previous project
+            </div>
+          </Link>
+        )}
         <Link href="/projects">All projects</Link>
-        <Link href="/projects/1">
-          <div className={styles.btn}>
-            Next project
-            <FaAngleRight />
-          </div>
-        </Link>
+        {projects.find((p) => p.id === project.id + 1) ? (
+          <Link href={`/projects/${project.id + 1}`}>
+            <div className={`${styles.btn} ${styles.active}`}>
+              Next project
+              <FaAngleRight />
+            </div>
+          </Link>
+        ) : (
+          <Link href="#">
+            <div className={styles.btn}>
+              Next project
+              <FaAngleRight />
+            </div>
+          </Link>
+        )}
       </motion.div>
 
       <Footer />
