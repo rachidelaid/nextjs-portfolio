@@ -39,32 +39,46 @@ const contentMotion = {
   },
 };
 
-const ProjectCard = ({ project }) => {
-  return (
-    <Link href={`/projects/${project.id}`}>
-      <motion.div
-        className={styles.card}
-        variants={cardMotion}
-        whileHover="hover"
-        initial="initial"
-        animate="animate"
-        exit="initial"
-        style={{ backgroundImage: `url(${project.image})` }}
-      >
-        <motion.div variants={contentMotion} className={styles.content}>
-          <h3>{project.title}</h3>
-          {project.description.lenght <= 50 ? (
-            <p>{project.description}</p>
-          ) : (
-            <p>{project.description.substring(0, 50)} ...</p>
-          )}
-          <div className={styles.btn}>
-            <span>read more</span>
-            <FaAngleRight />
-          </div>
-        </motion.div>
+const ProjectCard = ({ project, blog }) => {
+  const card = () => (
+    <motion.div
+      className={styles.card}
+      variants={cardMotion}
+      whileHover="hover"
+      initial="initial"
+      animate="animate"
+      exit="initial"
+      style={{
+        backgroundImage: `url(${project.image})`,
+      }}
+    >
+      <motion.div variants={contentMotion} className={styles.content}>
+        <h3>{project.title}</h3>
+        {project.description.lenght <= 50 || blog ? (
+          <p>{project.description}</p>
+        ) : (
+          <p>{project.description.substring(0, 50)} ...</p>
+        )}
+        <div className={styles.btn}>
+          <span>read more</span>
+          <FaAngleRight />
+        </div>
       </motion.div>
-    </Link>
+    </motion.div>
+  );
+
+  return (
+    <>
+      {blog ? (
+        <a href={project.link} target="_blank" rel="noreferrer">
+          {card()}
+        </a>
+      ) : (
+        <Link href={`/projects/${project.id}`} onClick={openBlog}>
+          {card()}
+        </Link>
+      )}
+    </>
   );
 };
 

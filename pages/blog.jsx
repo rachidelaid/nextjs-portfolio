@@ -13,7 +13,7 @@ const blog = () => {
 
       <div className={styles.blogs}>
         {blogs.map((blog) => (
-          <ProjectCard key={blog.id} project={blog} />
+          <ProjectCard key={blog.id} project={blog} blog={true} />
         ))}
       </div>
       <Footer />

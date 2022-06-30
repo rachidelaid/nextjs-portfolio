@@ -40,6 +40,7 @@
   font-size: 0.7rem;
   font-weight: 600;
   transition: 0.4s ease-in-out;
+  cursor: pointer;
 }
 
 .btn:hover {
