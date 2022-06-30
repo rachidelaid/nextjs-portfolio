@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaUserAlt, FaAt, FaEnvelope } from 'react-icons/fa';
 import styles from '../styles/contact.module.css';
@@ -27,11 +27,12 @@ const labelMotions = {
   },
 };
 
-const contact = () => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
+const Contact = () => {
+  const [notification, setNotification] = useState(null);
 
-    fetch('/api/sheet', {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const resp = await fetch('/api/sheet', {
       method: 'POST',
       body: JSON.stringify({
         name: e.target.name.value.trim(),
@@ -43,16 +44,26 @@ const contact = () => {
       },
     });
 
-    e.target.reset();
+    if (resp.ok) {
+      setNotification({
+        message: 'Thank you for your message, expect to hear from me soon.',
+        type: 'success',
+      });
+      e.target.reset();
+    } else {
+      setNotification({
+        message:
+          'Something wrong happened, please try another communication method.',
+        type: 'error',
+      });
+    }
   };
 
   return (
     <div className={styles.container}>
-      <Notification
-        message="Thank you for your message, expect to hear from me soon."
-        duration={7}
-        type="error"
-      />
+      {notification && (
+        <Notification message={notification.message} type={notification.type} />
+      )}
       <h3>Get in touch</h3>
       <AnimatePresence>
         <motion.form
@@ -111,4 +122,4 @@ const contact = () => {
   );
 };
 
-export default contact;
+export default Contact;

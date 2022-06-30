@@ -25,6 +25,8 @@ function handler(req, res) {
     db.insertRows([
       [time, name, email, message]
     ])
+
+    res.send("OK");
   }
 }
 
