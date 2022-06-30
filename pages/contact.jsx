@@ -48,7 +48,11 @@ const contact = () => {
 
   return (
     <div className={styles.container}>
-      <Notification message="Thank you for your message, expect to hear from me soon." />
+      <Notification
+        message="Thank you for your message, expect to hear from me soon."
+        duration={7}
+        type="error"
+      />
       <h3>Get in touch</h3>
       <AnimatePresence>
         <motion.form

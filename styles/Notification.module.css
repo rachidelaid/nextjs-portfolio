@@ -8,23 +8,25 @@
   padding: 1rem 3rem 1rem 2rem;
   color: var(--white-color);
   font-size: 0.8rem;
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
+  position: fixed;
+  top: 2rem;
+  right: 6.5rem;
   box-shadow: var(--default-shadow);
   background-color: var(--dark4);
   width: 20rem;
+  z-index: 9999;
 }
 
-.notification::after {
-  content: '';
+.top_border {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 3px;
   background-color: var(--accent-color);
-  animation: shrink 3s ease-in-out forwards;
+  animation: shrink ease-in-out forwards;
+  animation-duration: 3s;
+  z-index: 9999;
 }
 
 .close {
@@ -43,9 +45,13 @@
 }
 
 .success {
-  background-color: green;
+  background-color: rgb(7, 63, 7);
 }
 
 .error {
-  background-color: red;
+  background-color: rgb(133, 0, 0);
+}
+
+.warning {
+  background-color: rgb(156, 102, 0);
 }

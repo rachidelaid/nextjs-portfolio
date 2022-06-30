@@ -28,7 +28,7 @@ const Footer = () => {
     const footerBottom = footerTop + footerHeight;
     const windowHeight = window.innerHeight;
     const windowBottom = window.pageYOffset + windowHeight;
-    console.log(footerBottom < windowBottom);
+
     if (footerBottom < windowBottom) {
       setClassName(`${styles.footer} ${styles.footer_fixed}`);
     } else {

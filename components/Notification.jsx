@@ -14,16 +14,29 @@ const notificationMotion = {
   },
 };
 
-const Notification = ({ message }) => {
+const Notification = ({ message, type, duration }) => {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      setIsVisible(false);
-    }, 3000);
+    const timeout = setTimeout(
+      () => {
+        setIsVisible(false);
+      },
+      duration ? duration * 1000 : 3000,
+    );
 
     return () => clearTimeout(timeout);
   }, []);
+
+  const getClassName = () => {
+    let className = '';
+
+    if (type === 'error') className = styles.error;
+    if (type === 'success') className = styles.success;
+    if (type === 'warning') className = styles.warning;
+
+    return `${styles.notification} ${className}`;
+  };
 
   return (
     <AnimatePresence>
@@ -33,8 +46,12 @@ const Notification = ({ message }) => {
           initial="hidden"
           animate="visible"
           exit="hidden"
-          className={styles.notification}
+          className={getClassName()}
         >
+          <div
+            className={styles.top_border}
+            style={{ animationDuration: duration ? `${duration}s` : '3s' }}
+          ></div>
           <FaTimes
             className={styles.close}
             onClick={() => setIsVisible(false)}
