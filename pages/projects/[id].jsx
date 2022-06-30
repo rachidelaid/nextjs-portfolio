@@ -48,7 +48,7 @@ const Project = ({ project }) => {
         <div className={styles.category}>{project.langs.join(', ')}</div>
       </div>
 
-      <SwiperWrap>
+      <SwiperWrap centered={true}>
         {[project.image].map((image, index) => (
           <SwiperSlide key={`card-${index}`}>
             <Image

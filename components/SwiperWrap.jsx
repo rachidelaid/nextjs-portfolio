@@ -6,7 +6,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import styles from '../styles/SwiperWrap.module.css';
 
-const SwiperWrap = ({ children }) => {
+const SwiperWrap = ({ children, centered }) => {
   const pagination = {
     clickable: true,
     el: '#pagination',
@@ -26,6 +26,7 @@ const SwiperWrap = ({ children }) => {
         className={`${styles.slider} recommendations_list`}
         slidesPerView={1}
         spaceBetween={30}
+        centeredSlides={centered}
         direction="horizontal"
         breakpoints={{
           // when window width is >= 1100px
