@@ -1,0 +1,11 @@
+.container {
+  padding: 0 2rem;
+  padding-top: 2rem;
+}
+
+.blogs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
