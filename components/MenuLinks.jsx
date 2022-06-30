@@ -52,6 +52,14 @@ const links = [
 const MenuLinks = ({ open, toggleMenu }) => {
   const router = useRouter();
 
+  const currentLink = () => {
+    if (router.pathname.includes('projects')) return 'Projects';
+
+    return links.find((l) => l.path === router.pathname)
+      ? links.find((l) => l.path === router.pathname).name
+      : 'No Page';
+  };
+
   return (
     <div className={styles.links}>
       <AnimatePresence>
@@ -64,9 +72,7 @@ const MenuLinks = ({ open, toggleMenu }) => {
             animate="visible"
             exit="hidden"
           >
-            {links.find((l) => l.path === router.pathname)
-              ? links.find((l) => l.path === router.pathname).name
-              : 'No Page'}
+            {currentLink()}
           </motion.div>
         )}
 
