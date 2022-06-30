@@ -14,6 +14,7 @@ function MyApp({ Component, pageProps }) {
     <div className="app">
       <SideBar />
       <div className={`main ${open ? 'expand' : ''}`}>
+        <div className="top_wrap"></div>
         <Component {...pageProps} />
       </div>
       <MenuBar openMenu={openMenu} />
