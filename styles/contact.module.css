@@ -3,6 +3,7 @@
   position: relative;
   max-width: 100%;
   padding-bottom: 7rem;
+  z-index: 1;
 }
 
 .card {
