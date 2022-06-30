@@ -1,0 +1,51 @@
+@keyframes shrink {
+  100% {
+    width: 0;
+  }
+}
+
+.notification {
+  padding: 1rem 3rem 1rem 2rem;
+  color: var(--white-color);
+  font-size: 0.8rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  box-shadow: var(--default-shadow);
+  background-color: var(--dark4);
+  width: 20rem;
+}
+
+.notification::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--accent-color);
+  animation: shrink 3s ease-in-out forwards;
+}
+
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  color: var(--gray-color);
+  transition: 0.3s ease-in-out;
+}
+
+.close:hover {
+  color: var(--white-color);
+  text-shadow: 0 0 3px rgba(250, 250, 252, 0.4);
+  transform: scale(1.1);
+}
+
+.success {
+  background-color: green;
+}
+
+.error {
+  background-color: red;
+}

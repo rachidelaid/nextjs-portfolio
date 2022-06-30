@@ -4,6 +4,7 @@ import { FaUserAlt, FaAt, FaEnvelope } from 'react-icons/fa';
 import styles from '../styles/contact.module.css';
 
 import Footer from '../components/Footer';
+import Notification from '../components/Notification';
 
 const cardMotions = {
   hidden: {
@@ -47,6 +48,7 @@ const contact = () => {
 
   return (
     <div className={styles.container}>
+      <Notification message="Thank you for your message, expect to hear from me soon." />
       <h3>Get in touch</h3>
       <AnimatePresence>
         <motion.form
