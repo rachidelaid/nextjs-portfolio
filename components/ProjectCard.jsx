@@ -74,9 +74,7 @@ const ProjectCard = ({ project, blog }) => {
           {card()}
         </a>
       ) : (
-        <Link href={`/projects/${project.id}`} onClick={openBlog}>
-          {card()}
-        </Link>
+        <Link href={`/projects/${project.id}`}>{card()}</Link>
       )}
     </>
   );
