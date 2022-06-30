@@ -14,16 +14,13 @@ const notificationMotion = {
   },
 };
 
-const Notification = ({ message, type, duration }) => {
+const Notification = ({ message, type, duration = 3 }) => {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    const timeout = setTimeout(
-      () => {
-        setIsVisible(false);
-      },
-      duration ? duration * 1000 : 3000,
-    );
+    const timeout = setTimeout(() => {
+      setIsVisible(false);
+    }, duration * 1000);
 
     return () => clearTimeout(timeout);
   }, []);
@@ -50,7 +47,7 @@ const Notification = ({ message, type, duration }) => {
         >
           <div
             className={styles.top_border}
-            style={{ animationDuration: duration ? `${duration}s` : '3s' }}
+            style={{ animationDuration: `${duration}s` }}
           ></div>
           <FaTimes
             className={styles.close}
