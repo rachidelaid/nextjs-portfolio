@@ -29,6 +29,20 @@ const labelMotions = {
 const contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    fetch('/api/sheet', {
+      method: 'POST',
+      body: JSON.stringify({
+        name: e.target.name.value.trim(),
+        email: e.target.email.value.trim(),
+        message: e.target.message.value.trim(),
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    e.target.reset();
   };
 
   return (
@@ -45,11 +59,23 @@ const contact = () => {
         >
           <motion.label variants={labelMotions} key="label1" htmlFor="name">
             <FaUserAlt />
-            <input type="text" name="name" id="name" placeholder="name" />
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="name"
+              required
+            />
           </motion.label>
           <motion.label variants={labelMotions} key="label2" htmlFor="email">
             <FaAt />
-            <input type="email" name="email" id="email" placeholder="Email" />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              required
+            />
           </motion.label>
           <motion.label variants={labelMotions} key="label3" htmlFor="message">
             <FaEnvelope />
@@ -59,6 +85,7 @@ const contact = () => {
               cols="30"
               rows="10"
               placeholder="Message"
+              required
             ></textarea>
           </motion.label>
           <motion.button
