@@ -1,8 +1,11 @@
 .container {
   padding: 0 2rem;
   padding-top: 2rem;
-  z-index: 1;
+}
+
+.container h4 {
   position: relative;
+  z-index: 1;
 }
 
 .blogs {
