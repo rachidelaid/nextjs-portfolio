@@ -101,3 +101,10 @@ body {
 svg.disabled {
   opacity: 0.2;
 }
+
+@media (max-width: 920px) {
+  .app {
+    margin: 0;
+    height: 100vh;
+  }
+}
