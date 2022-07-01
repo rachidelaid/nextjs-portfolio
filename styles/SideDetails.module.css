@@ -17,48 +17,9 @@
   font-size: 0.9rem;
 }
 
-.languages {
-  padding: 1rem 0;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid var(--lightgray-color);
-}
-
-.languages > div {
-  width: 33.33%;
-  text-align: center;
-}
-
 .details svg {
   display: block;
   width: 100%;
-}
-
-.languages path {
-  stroke-width: 7px;
-  fill-opacity: 0;
-  stroke: var(--dark1);
-}
-
-.languages path:last-child {
-  stroke: var(--accent-color);
-}
-
-.graph {
-  width: 65%;
-  position: relative;
-  margin: 0 auto 0.5rem;
-}
-
-.progress {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  padding: 0px;
-  margin: 0px;
-  transform: translate(-50%, -50%);
-  font-size: 11px;
-  color: var(--gray-color);
 }
 
 .hobbies {
