@@ -53,3 +53,9 @@
   cursor: pointer;
   text-transform: uppercase;
 }
+
+@media (max-width: 920px) {
+  .container {
+    padding-top: 75px;
+  }
+}

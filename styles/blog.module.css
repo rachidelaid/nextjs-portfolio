@@ -14,3 +14,9 @@
   gap: 2rem;
   margin-top: 2rem;
 }
+
+@media (max-width: 920px) {
+  .container {
+    padding-top: 75px;
+  }
+}

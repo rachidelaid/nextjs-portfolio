@@ -3,3 +3,9 @@
   z-index: 1;
   position: relative;
 }
+
+@media (max-width: 920px) {
+  .container {
+    padding-top: 75px;
+  }
+}

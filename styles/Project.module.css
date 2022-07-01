@@ -82,3 +82,9 @@
 .btn:hover {
   gap: 1rem;
 }
+
+@media (max-width: 920px) {
+  .container {
+    padding-top: 75px;
+  }
+}

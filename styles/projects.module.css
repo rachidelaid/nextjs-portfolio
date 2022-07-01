@@ -30,3 +30,9 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
+
+@media (max-width: 920px) {
+  .container {
+    padding-top: 75px;
+  }
+}
