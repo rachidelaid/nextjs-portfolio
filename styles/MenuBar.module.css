@@ -98,3 +98,16 @@
   background-color: var(--accent-color);
   color: var(--dark1);
 }
+
+@media (max-width: 920px) {
+  .menu_bar {
+    position: absolute;
+    height: 100vh;
+    right: -4.5rem;
+  }
+
+  .burger {
+    position: absolute;
+    left: -3rem;
+  }
+}

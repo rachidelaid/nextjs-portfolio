@@ -66,6 +66,17 @@ body {
   opacity: 0.4;
 }
 
+.nav_bar {
+  display: none;
+  background-color: var(--dark1);
+  height: 75px;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+  box-shadow: var(--default-shadow);
+}
+
 .top_wrap {
   background: linear-gradient(to bottom, #1e1e2800, #1e1e28),
     url('../public/bg.jpg');
@@ -106,5 +117,17 @@ svg.disabled {
   .app {
     margin: 0;
     height: 100vh;
+  }
+
+  .main {
+    width: 100%;
+  }
+
+  .main.expand {
+    margin: 0;
+  }
+
+  .nav_bar {
+    display: block;
   }
 }
