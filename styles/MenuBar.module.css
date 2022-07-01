@@ -26,6 +26,7 @@
   position: relative;
   width: 22px;
   height: 12px;
+  transition: 0.4s ease-in-out;
 }
 
 .burger span {
@@ -109,5 +110,13 @@
   .burger {
     position: absolute;
     left: -3rem;
+  }
+
+  .burger_menu {
+    height: 76px;
+  }
+
+  .expand .burger {
+    left: 1.5rem;
   }
 }
