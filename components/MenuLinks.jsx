@@ -40,12 +40,12 @@ const links = [
     name: 'Projects',
   },
   {
-    path: '/contact',
-    name: 'Contact',
-  },
-  {
     path: '/blog',
     name: 'Blog',
+  },
+  {
+    path: '/contact',
+    name: 'Contact',
   },
 ];
 
