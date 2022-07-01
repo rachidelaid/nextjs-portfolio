@@ -127,6 +127,10 @@ svg.disabled {
     margin: 0;
   }
 
+  .top_wrap {
+    height: 550px;
+  }
+
   .nav_bar {
     display: block;
   }
