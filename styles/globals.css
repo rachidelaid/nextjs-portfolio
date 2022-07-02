@@ -78,8 +78,7 @@ body {
 }
 
 .top_wrap {
-  background: linear-gradient(to bottom, #1e1e2800, #1e1e28),
-    url('../public/bg.jpg');
+  background: linear-gradient(to bottom, #1e1e2800, #1e1e28), url('/bg.jpg');
   background-size: cover;
   background-blend-mode: darken;
   position: absolute;
