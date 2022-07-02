@@ -19,7 +19,6 @@ const db = new gsheetdb({
 
 async function handler(req, res) {
   if (req.method === "POST") {
-    console.log(req.body);
     const { name, email, message } = req.body;
     const time = new Date().toGMTString();
 
@@ -28,11 +27,6 @@ async function handler(req, res) {
     ])
 
     res.send("OK");
-  }
-
-  if (req.method === "GET") {
-    const data = await db.getData()
-    res.json(data);
   }
 }
 
