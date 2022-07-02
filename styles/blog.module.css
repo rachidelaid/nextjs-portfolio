@@ -17,6 +17,13 @@
 
 @media (max-width: 920px) {
   .container {
+    padding: 0 1rem;
     padding-top: 6rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .blogs {
+    grid-template-columns: 1fr;
   }
 }
