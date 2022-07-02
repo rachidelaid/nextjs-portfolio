@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import styles from '../styles/TopCard.module.css';
 
@@ -24,13 +25,15 @@ const TopCard = ({ center }) => {
     >
       <h1>RACHID EL AID</h1>
       <TextRotate />
-      <motion.button
-        className={styles.btn}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-      >
-        Contact Me
-      </motion.button>
+      <Link href="/contact">
+        <motion.button
+          className={styles.btn}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          Contact Me
+        </motion.button>
+      </Link>
     </motion.div>
   );
 };
