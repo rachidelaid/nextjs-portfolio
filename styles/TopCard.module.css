@@ -41,4 +41,8 @@
   .top_card h1 {
     font-size: 2rem;
   }
+
+  .top_card.center {
+    align-items: flex-start;
+  }
 }

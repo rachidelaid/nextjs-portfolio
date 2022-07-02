@@ -88,3 +88,16 @@
     padding-top: 6rem;
   }
 }
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 1rem;
+    padding-top: 6rem;
+  }
+
+  .card_footer {
+    padding: 1rem;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}
