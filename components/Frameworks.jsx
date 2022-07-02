@@ -164,7 +164,7 @@ const Frameworks = () => {
 
   const breakpoints = {
     200: {
-      slidesPerView: 2,
+      slidesPerView: 3,
     },
     500: {
       slidesPerView: 4,

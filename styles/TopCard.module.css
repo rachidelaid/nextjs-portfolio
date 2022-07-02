@@ -32,3 +32,13 @@
   cursor: pointer;
   text-transform: uppercase;
 }
+
+@media (max-width: 600px) {
+  .top_card {
+    padding: 3rem 1rem;
+  }
+
+  .top_card h1 {
+    font-size: 2rem;
+  }
+}
