@@ -19,6 +19,7 @@ const db = new gsheetdb({
 
 function handler(req, res) {
   if (req.method === "POST") {
+    console.log(req.body);
     const { name, email, message } = req.body;
     const time = new Date().toGMTString();
 

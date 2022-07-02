@@ -13,7 +13,7 @@
   right: 6.5rem;
   box-shadow: var(--default-shadow);
   background-color: var(--dark4);
-  width: 20rem;
+  width: min(20rem, 85%);
   z-index: 9999;
 }
 
@@ -54,4 +54,11 @@
 
 .warning {
   background-color: rgb(156, 102, 0);
+}
+
+@media (max-width: 900px) {
+  .notification {
+    top: 5rem;
+    right: 1rem;
+  }
 }
