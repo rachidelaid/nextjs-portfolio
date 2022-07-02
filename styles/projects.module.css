@@ -33,6 +33,13 @@
 
 @media (max-width: 920px) {
   .container {
-    padding-top: 6rem;
+    padding: 0 1rem;
+    padding-top: 5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects {
+    grid-template-columns: 1fr;
   }
 }
