@@ -13,15 +13,15 @@ const projects = () => {
       id: 0,
     },
     {
-      name: 'Web',
+      name: 'Small',
       id: 1,
     },
     {
-      name: 'Mobile',
+      name: 'Medium',
       id: 2,
     },
     {
-      name: 'Other',
+      name: 'Large',
       id: 3,
     },
   ];
