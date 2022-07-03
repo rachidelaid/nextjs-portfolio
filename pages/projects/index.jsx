@@ -4,7 +4,8 @@ import styles from '../../styles/projects.module.css';
 import Footer from '../../components/Footer';
 import ProjectCard from '../../components/ProjectCard';
 
-import projectList from '../../utils/projects';
+// import projectList from '../../utils/projects';
+const projectList = [];
 
 const projects = () => {
   const categories = [
@@ -38,6 +39,11 @@ const projects = () => {
           </p>
         ))}
       </div>
+      {!projectList.length && (
+        <div className={styles.no_projects}>
+          <p>No projects yet</p>
+        </div>
+      )}
       <div className={styles.projects}>
         {projectList.map((project) => (
           <ProjectCard key={project.id} project={project} />
