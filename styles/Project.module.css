@@ -115,4 +115,20 @@
     grid-template-columns: 1fr;
     gap: 0.5rem;
   }
+
+  .details {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 2rem 0;
+    gap: 1rem;
+  }
+
+  .details div:last-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 0.7rem;
+  }
 }
