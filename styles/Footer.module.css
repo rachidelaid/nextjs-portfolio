@@ -15,3 +15,10 @@
   width: calc(100% - 4rem);
   margin: 2rem;
 }
+
+@media (max-width: 600px) {
+  .footer_fixed {
+    margin: 1rem;
+    width: calc(100% - 2rem);
+  }
+}
