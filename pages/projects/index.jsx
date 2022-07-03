@@ -5,8 +5,7 @@ import styles from '../../styles/projects.module.css';
 import Footer from '../../components/Footer';
 import ProjectCard from '../../components/ProjectCard';
 
-// import projectList from '../../utils/projects';
-const projectList = [];
+import projectList from '../../utils/projects';
 
 const noProjectsMotions = {
   hidden: {
