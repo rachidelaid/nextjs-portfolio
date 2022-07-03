@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { SwiperSlide } from 'swiper/react';
-import { FaAngleRight, FaAngleLeft } from 'react-icons/fa';
+import { FaAngleRight, FaAngleLeft, FaGithub, FaEye } from 'react-icons/fa';
 import styles from '../../styles/Project.module.css';
 
 import Footer from '../../components/Footer';
@@ -62,8 +62,19 @@ const Project = ({ project }) => {
       </SwiperWrap>
 
       <div className={styles.details}>
-        <h4>Description</h4>
-        <p>{project.description}</p>
+        <div>
+          <h4>Description</h4>
+          <p>{project.description}</p>
+        </div>
+
+        <div>
+          <a href={project.gitLink} target="_blank" rel="noreferrer">
+            <FaGithub />
+          </a>
+          <a href={project.liveLink} target="_blank" rel="noreferrer">
+            <FaEye />
+          </a>
+        </div>
       </div>
 
       <TopCard center={true} />

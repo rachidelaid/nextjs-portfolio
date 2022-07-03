@@ -8,7 +8,7 @@ const projects = [
       'A game where you have to decide if the right anime is ranked lower or higher than the left one. guess wrong once and you have to start again',
     langs: ['Svelte'],
     gitLink: 'https://github.com/rachidelaid/AnimeHigherLower',
-    srcLink: 'https://anime-higher-lower.netlify.app/',
+    liveLink: 'https://anime-higher-lower.netlify.app/',
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const projects = [
       'PokeDB includes the PokeAPI and Involvement API. You can like pokemons and comment on their page, check their type and base stats.',
     langs: ['html', 'css', 'javaScript', 'webpack'],
     gitLink: 'https://github.com/rachidelaid/pokeDB',
-    srcLink: 'https://pokedb.netlify.app/',
+    liveLink: 'https://pokedb.netlify.app/',
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const projects = [
       'A classic pomodoro timer, with extra functionality like changing the accent color and fonts.',
     langs: ['html', 'css', 'javaScript'],
     gitLink: 'https://github.com/rachidelaid/pomodoro-vanilla',
-    srcLink: 'https://rachidelaid.github.io/pomodoro-vanilla',
+    liveLink: 'https://rachidelaid.github.io/pomodoro-vanilla',
   },
   {
     id: 4,
@@ -41,7 +41,7 @@ const projects = [
       'This is classic todo app built with ReactJS with a few twists! This app includes a dark/light theme toggle and drag & drop reordering',
     langs: ['ReactJS'],
     gitLink: 'https://github.com/rachidelaid/react-todolist',
-    srcLink: 'https://todolist-react-app.herokuapp.com/',
+    liveLink: 'https://todolist-react-app.herokuapp.com/',
   },
   {
     id: 5,
@@ -52,7 +52,7 @@ const projects = [
       'This is a website to Display a list of books using an API, you can also add new book and removing it.',
     langs: ['ReactJS', 'Redux'],
     gitLink: 'https://github.com/rachidelaid/Bookstore-reactjs',
-    srcLink: 'https://reactjs-book-store-cms.netlify.app/',
+    liveLink: 'https://reactjs-book-store-cms.netlify.app/',
   },
   {
     id: 6,
@@ -63,7 +63,7 @@ const projects = [
       'this is a clone of human benchmark website, built using reactJS. check the live link below if you wanna try it out.',
     langs: ['ReactJS'],
     gitLink: 'https://github.com/rachidelaid/human-benchmark',
-    srcLink: 'https://human-benchmark.netlify.app/',
+    liveLink: 'https://human-benchmark.netlify.app/',
   },
   {
     id: 7,
@@ -74,7 +74,7 @@ const projects = [
       'a clone of the wordle game build using vuejs 3. with extra functionality like changing the theme',
     langs: ['VueJS'],
     gitLink: 'https://github.com/rachidelaid/WORDLE-VueJS',
-    srcLink: 'https://vuejs-wordle.netlify.app/',
+    liveLink: 'https://vuejs-wordle.netlify.app/',
   },
   {
     id: 8,
@@ -85,7 +85,7 @@ const projects = [
       'this is a todo list on the Kanban style. built using svelte and svelte-dnd-actions. you can create list and tasks, edit at any time and drag them around.',
     langs: ['svelte'],
     gitLink: 'https://github.com/rachidelaid/WORDLE-VueJS',
-    srcLink: 'https://trello-svelte-clone.netlify.app/',
+    liveLink: 'https://trello-svelte-clone.netlify.app/',
   },
   {
     id: 9,
@@ -95,7 +95,7 @@ const projects = [
     description: 'The recipe is created with ruby on rails and allows logged in users to create recipes from food items they have available. It also allows them to view public recipes shared by other users.',
     langs: ['ruby on rails', 'bootstrap'],
     gitLink: 'https://github.com/rachidelaid/rails-recipe-app',
-    srcLink: 'https://github.com/rachidelaid/rails-recipe-app',
+    liveLink: 'https://github.com/rachidelaid/rails-recipe-app',
   },
 ];
 
