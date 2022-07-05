@@ -88,7 +88,11 @@ const MenuLinks = ({ open, toggleMenu }) => {
               <motion.li
                 key={link.path}
                 className={`${
-                  router.pathname === link.path ? styles.active : ''
+                  router.pathname === link.path ||
+                  (link.path === '/projects' &&
+                    router.pathname.includes('projects'))
+                    ? styles.active
+                    : ''
                 }`}
                 variants={linksMotions}
                 onClick={() => toggleMenu()}
