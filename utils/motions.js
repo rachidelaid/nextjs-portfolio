@@ -95,6 +95,26 @@ export const fadeInUp = {
   exit,
 };
 
+export const scaleIn = {
+  hidden: {
+    opacity: 0,
+    scale: 0.9,
+    transition: {
+      duration: 0.3,
+      ease: 'easeInOut',
+    },
+  },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.3,
+      ease: 'easeInOut',
+    },
+  },
+  exit,
+}
+
 export const contactMotions = {
   hidden: {
     scale: 0.9,
@@ -111,3 +131,16 @@ export const contactMotions = {
     },
   },
 };
+
+export const stagger = {
+  visible: {
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+  exit: {
+    transition: {
+      staggerChildren: 0.1,
+    },
+  }
+}

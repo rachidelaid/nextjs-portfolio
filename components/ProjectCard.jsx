@@ -4,24 +4,7 @@ import { motion } from 'framer-motion';
 import { FaAngleRight } from 'react-icons/fa';
 import styles from '../styles/ProjectCard.module.css';
 
-const cardMotion = {
-  initial: {
-    opacity: 0,
-    scale: 0.9,
-    transition: {
-      duration: 0.3,
-      ease: 'easeInOut',
-    },
-  },
-  animate: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      duration: 0.3,
-      ease: 'easeInOut',
-    },
-  },
-};
+import { scaleIn } from '../utils/motions';
 
 const contentMotion = {
   initial: {
@@ -43,7 +26,7 @@ const ProjectCard = ({ project, blog }) => {
   const card = () => (
     <motion.div
       className={styles.card}
-      variants={cardMotion}
+      variants={scaleIn}
       whileHover="hover"
       initial="initial"
       animate="animate"
@@ -51,6 +34,7 @@ const ProjectCard = ({ project, blog }) => {
       style={{
         backgroundImage: `url(${project.image})`,
       }}
+      key={project.id}
     >
       <motion.div variants={contentMotion} className={styles.content}>
         <h3>{project.title}</h3>

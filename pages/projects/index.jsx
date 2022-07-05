@@ -7,18 +7,7 @@ import ProjectCard from '../../components/ProjectCard';
 
 import projectList from '../../utils/projects';
 
-const noProjectsMotions = {
-  hidden: {
-    scale: 0,
-  },
-  visible: {
-    scale: 1,
-    transition: {
-      duration: 0.5,
-      ease: 'easeInOut',
-    },
-  },
-};
+import { fadeInDown, stagger } from '../../utils/motions';
 
 const Projects = () => {
   const [category, setCategory] = useState(0);
@@ -44,7 +33,13 @@ const Projects = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.categories}>
+      <motion.div
+        variants={fadeInDown}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+        className={styles.categories}
+      >
         {categories.map((cate) => (
           <p
             key={cate.id}
@@ -54,23 +49,31 @@ const Projects = () => {
             {cate.name}
           </p>
         ))}
-      </div>
+      </motion.div>
       {!projectList.length && (
         <motion.div
-          variants={noProjectsMotions}
+          variants={fadeInDown}
           initial="hidden"
           animate="visible"
-          exit="hidden"
+          exit="exit"
           className={styles.no_projects}
         >
           <p>No projects yet</p>
         </motion.div>
       )}
-      <div className={styles.projects}>
+      <motion.div
+        variants={stagger}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+        className={styles.projects}
+      >
         {projectList.map((project) => (
-          <ProjectCard key={project.id} project={project} />
+          <motion.div variants={fadeInDown} key={project.id}>
+            <ProjectCard project={project} />
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
       <Footer />
     </div>
   );
