@@ -65,59 +65,57 @@ const Contact = () => {
         <Notification message={notification.message} type={notification.type} />
       )}
       <h3>Get in touch</h3>
-      <AnimatePresence>
-        <motion.form
-          onSubmit={handleSubmit}
-          className={styles.card}
-          variants={cardMotions}
-          initial="hidden"
-          animate="visible"
-          exit="hidden"
+      <motion.form
+        onSubmit={handleSubmit}
+        className={styles.card}
+        variants={cardMotions}
+        initial="hidden"
+        animate="visible"
+        exit="hidden"
+      >
+        <motion.label variants={labelMotions} key="label1" htmlFor="name">
+          <FaUserAlt />
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="name"
+            required
+          />
+        </motion.label>
+        <motion.label variants={labelMotions} key="label2" htmlFor="email">
+          <FaAt />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email"
+            required
+          />
+        </motion.label>
+        <motion.label variants={labelMotions} key="label3" htmlFor="message">
+          <FaEnvelope />
+          <textarea
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+            placeholder="Message"
+            required
+          ></textarea>
+        </motion.label>
+        <motion.button
+          variants={labelMotions}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          type="submit"
+          key="button"
+          className={styles.btn}
         >
-          <motion.label variants={labelMotions} key="label1" htmlFor="name">
-            <FaUserAlt />
-            <input
-              type="text"
-              name="name"
-              id="name"
-              placeholder="name"
-              required
-            />
-          </motion.label>
-          <motion.label variants={labelMotions} key="label2" htmlFor="email">
-            <FaAt />
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Email"
-              required
-            />
-          </motion.label>
-          <motion.label variants={labelMotions} key="label3" htmlFor="message">
-            <FaEnvelope />
-            <textarea
-              name="message"
-              id="message"
-              cols="30"
-              rows="10"
-              placeholder="Message"
-              required
-            ></textarea>
-          </motion.label>
-          <motion.button
-            variants={labelMotions}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            type="submit"
-            key="button"
-            className={styles.btn}
-          >
-            Send Message
-          </motion.button>
-        </motion.form>
-      </AnimatePresence>
-      <Footer />
+          Send Message
+        </motion.button>
+      </motion.form>
+      <Footer position="absolute" />
     </div>
   );
 };

@@ -3,6 +3,7 @@ import '../styles/globals.css';
 
 import SideBar from '../components/SideBar';
 import MenuBar from '../components/MenuBar';
+import Footer from '../components/Footer';
 
 function MyApp({ Component, pageProps }) {
   const [open, setOpen] = useState(false);

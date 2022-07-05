@@ -7,8 +7,8 @@
   margin: 2rem 0;
 }
 
-.footer_fixed {
-  position: fixed;
+.footer_fixed,
+.footer_absolute {
   left: 0;
   bottom: 0;
   z-index: 9;
@@ -16,8 +16,17 @@
   margin: 2rem;
 }
 
+.footer_fixed {
+  position: fixed;
+}
+
+.footer_absolute {
+  position: absolute;
+}
+
 @media (max-width: 600px) {
-  .footer_fixed {
+  .footer_fixed,
+  .footer_absolute {
     margin: 1rem;
     width: calc(100% - 2rem);
   }

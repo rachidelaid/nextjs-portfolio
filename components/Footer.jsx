@@ -17,7 +17,7 @@ const footerMotions = {
   },
 };
 
-const Footer = () => {
+const Footer = ({ position = 'fixed' }) => {
   const [className, setClassName] = useState(styles.footer);
   const footerElement = useRef();
 
@@ -30,7 +30,11 @@ const Footer = () => {
     const windowBottom = window.pageYOffset + windowHeight;
 
     if (footerBottom < windowBottom) {
-      setClassName(`${styles.footer} ${styles.footer_fixed}`);
+      setClassName(
+        `${styles.footer} ${
+          position === 'fixed' ? styles.footer_fixed : styles.footer_absolute
+        }`,
+      );
     } else {
       setClassName(styles.footer);
     }

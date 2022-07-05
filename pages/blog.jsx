@@ -16,7 +16,7 @@ const blog = () => {
           <ProjectCard key={blog.id} project={blog} blog={true} />
         ))}
       </div>
-      <Footer />
+      <Footer position="relative" />
     </div>
   );
 };
