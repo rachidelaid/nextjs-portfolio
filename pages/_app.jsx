@@ -16,8 +16,8 @@ function MyApp({ Component, pageProps, router }) {
       <SideBar />
       <div className={`main ${open ? 'expand' : ''}`}>
         <AnimatePresence exitBeforeEnter>
-          <div className="nav_bar"></div>
           <div className="top_wrap"></div>
+          <div className="nav_bar"></div>
           <Component {...pageProps} key={router.route} />
         </AnimatePresence>
       </div>

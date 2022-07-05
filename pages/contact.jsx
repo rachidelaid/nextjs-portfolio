@@ -6,26 +6,7 @@ import styles from '../styles/contact.module.css';
 import Footer from '../components/Footer';
 import Notification from '../components/Notification';
 
-const cardMotions = {
-  hidden: {
-    scale: 0.9,
-  },
-  visible: {
-    scale: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
-
-const labelMotions = {
-  hidden: {
-    x: -30,
-  },
-  visible: {
-    x: 0,
-  },
-};
+import { fadeInRight, contactMotions } from '../utils/motions';
 
 const Contact = () => {
   const [notification, setNotification] = useState(null);
@@ -68,12 +49,12 @@ const Contact = () => {
       <motion.form
         onSubmit={handleSubmit}
         className={styles.card}
-        variants={cardMotions}
+        variants={contactMotions}
         initial="hidden"
         animate="visible"
         exit="hidden"
       >
-        <motion.label variants={labelMotions} key="label1" htmlFor="name">
+        <motion.label variants={fadeInRight} key="label1" htmlFor="name">
           <FaUserAlt />
           <input
             type="text"
@@ -83,7 +64,7 @@ const Contact = () => {
             required
           />
         </motion.label>
-        <motion.label variants={labelMotions} key="label2" htmlFor="email">
+        <motion.label variants={fadeInRight} key="label2" htmlFor="email">
           <FaAt />
           <input
             type="email"
@@ -93,7 +74,7 @@ const Contact = () => {
             required
           />
         </motion.label>
-        <motion.label variants={labelMotions} key="label3" htmlFor="message">
+        <motion.label variants={fadeInRight} key="label3" htmlFor="message">
           <FaEnvelope />
           <textarea
             name="message"
@@ -105,7 +86,7 @@ const Contact = () => {
           ></textarea>
         </motion.label>
         <motion.button
-          variants={labelMotions}
+          variants={fadeInRight}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           type="submit"

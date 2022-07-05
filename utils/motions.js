@@ -5,7 +5,7 @@ const exit = {
     duration: 0.3,
     ease: 'easeInOut',
   },
-}
+};
 
 export const fadeInDown = {
   hidden: {
@@ -26,7 +26,7 @@ export const fadeInDown = {
       ease: 'easeInOut',
     },
   },
-  exit
+  exit,
 };
 
 export const fadeInRight = {
@@ -48,7 +48,29 @@ export const fadeInRight = {
       ease: 'easeInOut',
     },
   },
-  exit
+  exit,
+};
+
+export const fadeInLeft = {
+  hidden: {
+    x: 100,
+    opacity: 0,
+    scale: 0.9,
+    transition: {
+      duration: 0.3,
+      ease: 'easeInOut',
+    },
+  },
+  visible: {
+    x: 0,
+    scale: 1,
+    opacity: 1,
+    transition: {
+      duration: 0.3,
+      ease: 'easeInOut',
+    },
+  },
+  exit,
 };
 
 export const fadeInUp = {
@@ -70,13 +92,22 @@ export const fadeInUp = {
       ease: 'easeInOut',
     },
   },
-  exit
+  exit,
 };
 
-export const stagger = {
-  visible: {
+export const contactMotions = {
+  hidden: {
+    scale: 0.9,
+    opacity: 0,
     transition: {
-      staggerChildren: 0.1
-    }
-  }
+      staggerChildren: 0.1,
+    },
+  },
+  visible: {
+    scale: 1,
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
 };
