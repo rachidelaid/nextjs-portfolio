@@ -12,6 +12,8 @@ import TopCard from '../../components/TopCard';
 
 import projects from '../../utils/projects';
 
+import { fadeInDown, stagger, fadeInRight } from '../../utils/motions';
+
 export const getStaticPaths = () => {
   return {
     paths: projects.map((project) => ({
@@ -31,60 +33,53 @@ export const getStaticProps = (context) => {
   };
 };
 
-const cardMotions = {
-  hidden: {
-    scale: 0.9,
-  },
-  visible: {
-    scale: 1,
-  },
-};
-
 const Project = ({ project }) => {
   return (
-    <div className={styles.container}>
-      <div className={styles.head}>
+    <motion.div
+      className={styles.container}
+      variants={stagger}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
+      <motion.div className={styles.head} variants={fadeInDown}>
         <h4>{project.title}</h4>
         <div className={styles.category}>{project.langs.join(', ')}</div>
-      </div>
+      </motion.div>
 
-      <SwiperWrap centered={true}>
-        {[project.image].map((image, index) => (
-          <SwiperSlide key={`card-${index}`}>
-            <Image
-              src={image}
-              width={400}
-              height={300}
-              alt="project screenshot"
-            />
-          </SwiperSlide>
-        ))}
-      </SwiperWrap>
+      <motion.div className={styles.head} variants={fadeInRight}>
+        <SwiperWrap centered={true}>
+          {[project.image].map((image, index) => (
+            <SwiperSlide key={`card-${index}`}>
+              <Image
+                src={image}
+                width={400}
+                height={300}
+                alt="project screenshot"
+              />
+            </SwiperSlide>
+          ))}
+        </SwiperWrap>
+      </motion.div>
 
       <div className={styles.details}>
-        <div>
+        <motion.div variants={fadeInDown}>
           <h4>Description</h4>
           <p>{project.description}</p>
-        </div>
+        </motion.div>
 
-        <div>
+        <motion.div variants={fadeInDown}>
           <a href={project.gitLink} target="_blank" rel="noreferrer">
             <FaGithub />
           </a>
           <a href={project.liveLink} target="_blank" rel="noreferrer">
             <FaEye />
           </a>
-        </div>
+        </motion.div>
       </div>
 
       <TopCard center={true} />
-      <motion.div
-        variants={cardMotions}
-        initial="hidden"
-        animate="visible"
-        exit="hidden"
-        className={styles.card_footer}
-      >
+      <motion.div variants={fadeInDown} className={styles.card_footer}>
         {projects.find((p) => p.id === project.id - 1) ? (
           <Link href={`/projects/${project.id - 1}`}>
             <div className={`${styles.btn} ${styles.active}`}>
@@ -119,7 +114,7 @@ const Project = ({ project }) => {
       </motion.div>
 
       <Footer />
-    </div>
+    </motion.div>
   );
 };
 

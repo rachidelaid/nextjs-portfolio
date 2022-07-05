@@ -2,7 +2,7 @@ const exit = {
   opacity: 0,
   scale: 0.8,
   transition: {
-    duration: 0.3,
+    duration: 0.2,
     ease: 'easeInOut',
   },
 };
@@ -13,7 +13,7 @@ export const fadeInDown = {
     opacity: 0,
     scale: 0.9,
     transition: {
-      duration: 0.3,
+      duration: 0.2,
       ease: 'easeInOut',
     },
   },
@@ -22,7 +22,7 @@ export const fadeInDown = {
     scale: 1,
     opacity: 1,
     transition: {
-      duration: 0.3,
+      duration: 0.2,
       ease: 'easeInOut',
     },
   },
@@ -35,7 +35,7 @@ export const fadeInRight = {
     opacity: 0,
     scale: 0.9,
     transition: {
-      duration: 0.3,
+      duration: 0.2,
       ease: 'easeInOut',
     },
   },
@@ -44,7 +44,7 @@ export const fadeInRight = {
     scale: 1,
     opacity: 1,
     transition: {
-      duration: 0.3,
+      duration: 0.2,
       ease: 'easeInOut',
     },
   },
@@ -57,7 +57,7 @@ export const fadeInLeft = {
     opacity: 0,
     scale: 0.9,
     transition: {
-      duration: 0.3,
+      duration: 0.2,
       ease: 'easeInOut',
     },
   },
@@ -66,7 +66,7 @@ export const fadeInLeft = {
     scale: 1,
     opacity: 1,
     transition: {
-      duration: 0.3,
+      duration: 0.2,
       ease: 'easeInOut',
     },
   },
@@ -79,7 +79,7 @@ export const fadeInUp = {
     opacity: 0,
     scale: 0.9,
     transition: {
-      duration: 0.3,
+      duration: 0.2,
       ease: 'easeInOut',
     },
   },
@@ -88,7 +88,7 @@ export const fadeInUp = {
     scale: 1,
     opacity: 1,
     transition: {
-      duration: 0.3,
+      duration: 0.2,
       ease: 'easeInOut',
     },
   },
@@ -100,7 +100,7 @@ export const scaleIn = {
     opacity: 0,
     scale: 0.9,
     transition: {
-      duration: 0.3,
+      duration: 0.2,
       ease: 'easeInOut',
     },
   },
@@ -108,7 +108,7 @@ export const scaleIn = {
     opacity: 1,
     scale: 1,
     transition: {
-      duration: 0.3,
+      duration: 0.2,
       ease: 'easeInOut',
     },
   },
@@ -135,12 +135,12 @@ export const contactMotions = {
 export const stagger = {
   visible: {
     transition: {
-      staggerChildren: 0.1,
+      staggerChildren: 0.15,
     },
   },
   exit: {
     transition: {
-      staggerChildren: 0.1,
+      staggerChildren: 0.15,
     },
   }
 }
