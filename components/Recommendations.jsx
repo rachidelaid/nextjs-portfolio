@@ -1,9 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
 import { SwiperSlide } from 'swiper/react';
+import { motion } from 'framer-motion';
 import styles from '../styles/Recommendations.module.css';
 
 import SwiperWrap from './SwiperWrap';
+
+import { fadeInUp } from '../utils/motions';
 
 const RecommendationCard = ({ card }) => {
   return (
@@ -76,7 +79,13 @@ const Recommendations = () => {
   ];
 
   return (
-    <div className={styles.recommendations}>
+    <motion.div
+      variants={fadeInUp}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      className={styles.recommendations}
+    >
       <h3>Recommendations From Linkedin</h3>
       <SwiperWrap>
         {recommendations.map((card, index) => (
@@ -85,7 +94,7 @@ const Recommendations = () => {
           </SwiperSlide>
         ))}
       </SwiperWrap>
-    </div>
+    </motion.div>
   );
 };
 

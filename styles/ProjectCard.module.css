@@ -1,6 +1,7 @@
 .card {
   background-color: var(--dark5);
-  background-size: 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   background-position: center;
   box-shadow: var(--default-shadow);
   width: 100%;
@@ -12,7 +13,7 @@
 }
 
 .card:hover {
-  background-size: 110%;
+  background-size: 110% 110%;
 }
 
 .content {

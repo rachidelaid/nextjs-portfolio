@@ -5,20 +5,13 @@ import styles from '../styles/TopCard.module.css';
 
 import TextRotate from './TextRotate';
 
-const cardMotions = {
-  hidden: {
-    scale: 0.9,
-  },
-  visible: {
-    scale: 1,
-  },
-};
+import { fadeInDown } from '../utils/motions';
 
 const TopCard = ({ center }) => {
   return (
     <motion.div
       className={`${styles.top_card} ${center ? styles.center : ''}`}
-      variants={cardMotions}
+      variants={fadeInDown}
       initial="hidden"
       animate="visible"
       exit="hidden"

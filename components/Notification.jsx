@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from '../styles/Notification.module.css';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { FaTimes } from 'react-icons/fa';
 
 const notificationMotion = {
@@ -36,7 +36,7 @@ const Notification = ({ message, type, duration = 3 }) => {
   };
 
   return (
-    <AnimatePresence>
+    <>
       {isVisible && (
         <motion.div
           variants={notificationMotion}
@@ -56,7 +56,7 @@ const Notification = ({ message, type, duration = 3 }) => {
           <p>{message}</p>
         </motion.div>
       )}
-    </AnimatePresence>
+    </>
   );
 };
 

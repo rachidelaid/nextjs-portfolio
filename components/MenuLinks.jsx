@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import styles from '../styles/MenuLinks.module.css';
@@ -62,47 +62,45 @@ const MenuLinks = ({ open, toggleMenu }) => {
 
   return (
     <div className={styles.links}>
-      <AnimatePresence>
-        {!open && (
-          <motion.div
-            key="currentRoute"
-            className={styles.current}
-            variants={currentMotions}
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
-          >
-            {currentLink()}
-          </motion.div>
-        )}
+      {!open && (
+        <motion.div
+          key="currentRoute"
+          className={styles.current}
+          variants={currentMotions}
+          initial="hidden"
+          animate="visible"
+          exit="hidden"
+        >
+          {currentLink()}
+        </motion.div>
+      )}
 
-        {open && (
-          <motion.ul
-            className={styles.nav}
-            variants={currentMotions}
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
-          >
-            {links.map((link) => (
-              <motion.li
-                key={link.path}
-                className={`${
-                  router.pathname === link.path ||
-                  (link.path === '/projects' &&
-                    router.pathname.includes('projects'))
-                    ? styles.active
-                    : ''
-                }`}
-                variants={linksMotions}
-                onClick={() => toggleMenu()}
-              >
-                <Link href={link.path}>{link.name}</Link>
-              </motion.li>
-            ))}
-          </motion.ul>
-        )}
-      </AnimatePresence>
+      {open && (
+        <motion.ul
+          className={styles.nav}
+          variants={currentMotions}
+          initial="hidden"
+          animate="visible"
+          exit="hidden"
+        >
+          {links.map((link) => (
+            <motion.li
+              key={link.path}
+              className={`${
+                router.pathname === link.path ||
+                (link.path === '/projects' &&
+                  router.pathname.includes('projects'))
+                  ? styles.active
+                  : ''
+              }`}
+              variants={linksMotions}
+              onClick={() => toggleMenu()}
+            >
+              <Link href={link.path}>{link.name}</Link>
+            </motion.li>
+          ))}
+        </motion.ul>
+      )}
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper';
 import {
@@ -37,6 +38,8 @@ import {
 } from 'react-icons/si';
 import 'swiper/css';
 import styles from '../styles/Frameworks.module.css';
+
+import { fadeInRight } from '../utils/motions';
 
 const Frameworks = () => {
   const icons = [
@@ -178,7 +181,13 @@ const Frameworks = () => {
   };
 
   return (
-    <div className={styles.swiper}>
+    <motion.div
+      variants={fadeInRight}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      className={styles.swiper}
+    >
       <Swiper
         slidesPerView={8}
         spaceBetween={30}
@@ -197,7 +206,7 @@ const Frameworks = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-    </div>
+    </motion.div>
   );
 };
 

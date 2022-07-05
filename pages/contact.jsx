@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { FaUserAlt, FaAt, FaEnvelope } from 'react-icons/fa';
 import styles from '../styles/contact.module.css';
 

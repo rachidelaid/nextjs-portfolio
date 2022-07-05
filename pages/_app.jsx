@@ -1,11 +1,11 @@
 import { useState } from 'react';
+import { AnimatePresence } from 'framer-motion';
 import '../styles/globals.css';
 
 import SideBar from '../components/SideBar';
 import MenuBar from '../components/MenuBar';
-import Footer from '../components/Footer';
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, router }) {
   const [open, setOpen] = useState(false);
   const openMenu = () => {
     setOpen(!open);
@@ -15,9 +15,11 @@ function MyApp({ Component, pageProps }) {
     <div className="app">
       <SideBar />
       <div className={`main ${open ? 'expand' : ''}`}>
-        <div className="nav_bar"></div>
-        <div className="top_wrap"></div>
-        <Component {...pageProps} />
+        <AnimatePresence exitBeforeEnter>
+          <div className="nav_bar"></div>
+          <div className="top_wrap"></div>
+          <Component {...pageProps} key={router.route} />
+        </AnimatePresence>
       </div>
       <MenuBar openMenu={openMenu} />
     </div>
