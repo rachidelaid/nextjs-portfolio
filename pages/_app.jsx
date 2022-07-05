@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Head from 'next/head';
 import { AnimatePresence } from 'framer-motion';
 import '../styles/globals.css';
 
@@ -13,6 +14,9 @@ function MyApp({ Component, pageProps, router }) {
 
   return (
     <div className="app">
+      <Head>
+        <title>RACHID EL AID | Full-Stack Developer</title>
+      </Head>
       <SideBar />
       <div className={`main ${open ? 'expand' : ''}`}>
         <AnimatePresence exitBeforeEnter>
