@@ -138,9 +138,4 @@ export const stagger = {
       staggerChildren: 0.15,
     },
   },
-  exit: {
-    transition: {
-      staggerChildren: 0.15,
-    },
-  }
 }
