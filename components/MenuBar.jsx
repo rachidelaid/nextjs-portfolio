@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import styles from '../styles/MenuBar.module.css';
 
+import { MdOutlineNightlight, MdOutlineLightMode } from 'react-icons/md';
+
 import MenuLinks from './MenuLinks';
 
 const MenuBar = ({ openMenu }) => {
   const [open, setOpen] = useState(false);
+  const [dark, setDark] = useState(false);
 
   const toggleMenu = () => {
     openMenu();
@@ -22,10 +25,13 @@ const MenuBar = ({ openMenu }) => {
 
       <MenuLinks open={open} toggleMenu={toggleMenu} />
 
-      <div className={styles.languages}>
-        <p>AR</p>
-        <p>FR</p>
-        <p className={styles.active}>EN</p>
+      <div className={styles.footer}>
+        <div
+          className={`${dark ? styles.active : ''}`}
+          onClick={() => setDark(!dark)}
+        >
+          {dark ? <MdOutlineLightMode /> : <MdOutlineNightlight />}
+        </div>
       </div>
     </div>
   );
