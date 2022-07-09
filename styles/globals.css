@@ -78,7 +78,8 @@ body {
 }
 
 .top_wrap {
-  background: linear-gradient(to bottom, #1e1e2800, #1e1e28), url('/bg.jpg');
+  background: linear-gradient(to bottom, var(--dark1), var(--dark5)),
+    url('/bg.jpg');
   background-size: cover;
   background-blend-mode: darken;
   position: absolute;
@@ -95,7 +96,8 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #1e1e287a;
+  background-color: var(--dark2);
+  opacity: 0.6;
 }
 
 .recommendations_list .swiper-slide {
