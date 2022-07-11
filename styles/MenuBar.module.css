@@ -101,7 +101,7 @@
 
 @media (max-width: 920px) {
   .menu_bar {
-    position: absolute;
+    position: fixed;
     height: 100vh;
     right: -4.5rem;
   }
